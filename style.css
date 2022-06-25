@@ -1,0 +1,12 @@
+body{
+    margin-left: 3%;
+    padding-top: 2%;
+}
+
+img{
+    max-width: 800px;
+}
+
+input {
+    width: 500px;
+}
