@@ -3,13 +3,14 @@ body{
     padding-top: 10%;
     background-color: rgb(244, 216, 252);
     background-image: url(./assets/pexels-philippe-donn-1257860.jpg);
-    background-size: contain;
+    background-size: 50%;
     font-size: 62.5%;
     text-align: center;
     color: #fff;
 }
 p{
     margin-top: 2%;
+    margin-left: 2%;
     font-size: 2rem;
     color: #fff;
     text-align: center;
@@ -59,8 +60,7 @@ label{
     margin-bottom: 5%;
 }
 input {
-    font-size: 3rem;
-    margin-top: 2rem;
+    margin-top: 4rem;
     width: 45%;
     border: solid 2px #000;
     border-right: 1px solid #353535;
