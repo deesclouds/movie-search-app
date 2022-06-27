@@ -1,12 +1,40 @@
 body{
-    margin-left: 3%;
-    padding-top: 2%;
+    margin-left: 0%;
+    padding-top: 10%;
+    background-color: rgb(244, 216, 252);
+    background-image: url(./assets/pexels-philippe-donn-1257860.jpg);
+    background-size: auto;
+    font-size: 62.5%;
+    text-align: center;
+    color: #fff;
 }
 
 img{
-    max-width: 800px;
+    max-width: 50%;
+    border: 2px inset gold;
+}
+label, #title{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2rem;
+    padding: 1%;
+}
+#title, #ui-id-1{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(241, 239, 239);
+    font-size: 1rem;
 }
 
 input {
-    width: 500px;
+    width: 25%;
+    border: solid 2px #000;
+    border-right: 1px solid #353535;
+    border-bottom: 1px solid #353535;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px; 
+}
+
+li{
+    list-style: none;
+    font-size: 2rem;
 }
