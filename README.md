@@ -3,7 +3,7 @@ This is a movie finding application, that auto corrects search inputs while typi
 
 **Link to project:** https://psychic-octo-broccoli.netlify.app/
 
-![gif of project] (https://github.com/deesclouds/psychic-octo-broccoli/blob/main/psychic-octo-broccoli.gif)
+![gif of project] <img src="https://github.com/deesclouds/psychic-octo-broccoli/blob/main/psychic-octo-broccoli-1.gif" width="250" height="250"/>
 
 ## How It's Made:
 
