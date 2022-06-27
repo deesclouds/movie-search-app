@@ -1,9 +1,9 @@
 # Psychic-Octo-broccoli
 This is a movie finding application, that auto corrects search inputs while typing and displays relevant searches from a database.
 
-**Link to project:** 
+**Link to project:** https://psychic-octo-broccoli.netlify.app/
 
-![gif of project] <div style="width:360px;max-width:100%;"><div style="height:0;padding-bottom:56.11%;position:relative;"><iframe width="360" height="202" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameBorder="0" src="https://imgflip.com/embed/6kzd5p"></iframe></div><p><a href="https://imgflip.com/gif/6kzd5p"></a></p></div>
+![gif of project] (https://github.com/deesclouds/psychic-octo-broccoli/blob/main/psychic-octo-broccoli.gif)
 
 ## How It's Made:
 
