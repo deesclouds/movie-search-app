@@ -8,7 +8,7 @@ This is a movie finding application, that auto completes and return search input
 
 ## How It's Made:
 
-**Tech used:** HTML, CSS, JavaScript, MongoDB
+**Tech used:** HTML, CSS, JavaScript, MongoDB <br>
 This application was made with sample movie data from Mongo Atlas. 
 
 
