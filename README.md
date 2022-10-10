@@ -5,7 +5,7 @@ This movie search tool uses autocomplete to return search queries with up to thr
 **Link to project:** https://psychic-octo-broccoli.netlify.app/
 
 ![gif of project] <br>
-<img src="https://github.com/deesclouds/psychic-octo-broccoli/blob/main/psychic-octo-broccoli.gif" width="250" height="auto"/>
+<img src="https://github.com/deesclouds/psychic-octo-broccoli/blob/main/movie-search-app.gif" width="250" height="auto"/>
 
 ## How It's Made:
 
