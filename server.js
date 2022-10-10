@@ -14,7 +14,7 @@ let db,
 
 MongoClient.connect(dbConnectionStr)
     .then(client => {
-        console.log(`Connected to database`)
+        console.log(`Connected to database ${dbName}`)
         db = client.db(dbName)
         collection = db.collection(`movies`)
     })
@@ -59,7 +59,7 @@ app.get("/get/:id", async (request,response) => {
     }
 })
 app.listen(process.env.PORT || PORT, () => {
-    console.log(`Server is running on port`)
+    console.log(`Server is running on port ${PORT}`)
 })
 
 
