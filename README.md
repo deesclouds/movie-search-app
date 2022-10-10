@@ -1,5 +1,6 @@
-# Psychic-Octo-broccoli
-This is a movie finding application, that auto completes and return search inputs with up to 3 typos in search query during typing and displays relevant searches from a database.
+# movie-search-app
+
+This movie search tool uses autocomplete to return search queries with up to three typos as you type, then displays searches from a database that are relevant to your search.
 
 **Link to project:** https://psychic-octo-broccoli.netlify.app/
 
@@ -8,13 +9,16 @@ This is a movie finding application, that auto completes and return search input
 
 ## How It's Made:
 
-**Tech used:** HTML, CSS, JavaScript, MongoDB <br>
+**Tech used:** HTML, CSS, JavaScript, Doppler, MongoDB <br>
 This application was made with sample movie data from Mongo Atlas. 
 
 
 ## Optimizations
-No optimizations at the moment. 
+Use Doppler to ensure that my secret file stays just that—secret.
+
 
 ## Lessons Learned:
 A major lesson learned was keeping my secret files secret and making sure that was done. 
+
+
 
