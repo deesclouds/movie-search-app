@@ -1,7 +1,7 @@
 {
   "name": "movie-finder",
   "version": "1.0.0",
-  "description": "",
+  "description": "This movie search tool uses autocomplete to return search queries with up to three typos as you type, then displays searches from a database that are relevant to your search.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,5 +14,13 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mongodb": "^4.10.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deesclouds/movie-search-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/deesclouds/movie-search-app/issues"
+  },
+  "homepage": "https://github.com/deesclouds/movie-search-app#readme"
 }
