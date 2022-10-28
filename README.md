@@ -16,6 +16,9 @@ This application was made with sample movie data from Mongo Atlas.
 ## Optimizations
 Use Doppler to ensure that my secret file stays just that—secret.
 
+# Issues
+App is currently down until I host it on another platform. Gif displays functionality. 
+
 
 ## Lessons Learned:
 A major lesson learned was keeping my secret files secret and making sure that was done. 
