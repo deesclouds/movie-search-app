@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  background-image: url(https://images.pexels.com/photos/3709430/pexels-photo-3709430.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+  height: 73em; 
+  display: grid;
+  grid-template: repeat(15, 1fr) / repeat(15, 1fr);
+  overflow: visible;
+  margin-bottom: 10em;
+  
+}
+
+.cell {
+  width: 100%;
+  height: 100%;
+  // border: 1px solid #fff1;
+  z-index: 2;
+}
+
+@for $i from 0 to 15 {
+  .cell:nth-child(15n + #{$i + 1}):hover ~ .content {
+    --positionX: #{$i};
+  }
+  .cell:nth-child(n + #{15 * $i + 1}):nth-child(-n + #{15 * ($i + 1)}):hover ~ .content {
+    --positionY: #{$i};
+  }
+}
+
+.content {
+  --positionX: 7;
+  --positionY: 7;
+
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20em;
+}
+
+.css {
+  font-family: 'Fredoka One', monospace;
+  position: absolute;
+  top: 50%; left: 50%;
+  animation: color 3s infinite linear;
+  text-shadow: 0 0 10px #000a;
+  transition: all 0.5s;
+
+  @for $i from 0 to 10 {
+    &:nth-child(#{$i + 1}) {
+      font-size: #{100 + $i * 10}px;
+      animation-delay: #{$i * -0.3}s;
+      opacity: #{0.1 + $i * 0.1};
+      transform:
+        translateX(calc(-50% - (var(--positionX) - 7) * #{(7 - $i) * 3px}))
+        translateY(calc(-50% - (var(--positionY) - 7) * #{(7 - $i) * 3px}))
+        rotateX(calc(0deg - (var(--positionY) - 7) * 5deg))
+        rotateY(calc((var(--positionX) - 7) * 5deg));
+    }
+  }
+
+  @keyframes color {
+    @for $c from 0 through 10 {
+      #{$c * 10%} { color: hsl(36 * $c, 75%, 75%); }
+    }
+  }
+}
+
+// body{
+//   margin-left: 0%;
+//   padding-top: 10%;
+//   background-color: rgb(244, 216, 252);
+//   background-image: url(./assets/pexels-philippe-donn-1257860.jpg);
+//   background-size: 50%;
+//   font-size: 62.5%;
+//   text-align: center;
+//   color: #fff;
+// }
+p{
+  margin-top: 2%;
+  margin-left: 2%;
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+img{
+  margin: 2%;
+  padding: 0;
+  max-width: 50%;
+  background-color: #fff;
+  top: calc(50% - 150px);
+  left: calc(50% - 150px);
+  box-shadow:
+        inset 0 0 50px #fff,
+        inset 20px 0 80px #f0f,
+        inset -20px 0 80px #0ff,
+        inset 20px 0 300px #f0f,
+        inset -20px 0 300px #0ff,
+        0 0 50px #fff,
+        -10px 0 80px #f0f,
+        10px 0 80px #0ff;
+
+}
+.container{
+  // margin: 00px;
+  padding-top: 10px;
+  align-items: center;
+  flex-direction: column;
+  // margin: auto;
+  z-index: 1000;
+  min-width: 100%;
+  justify-content: center;
+  display: flex;
+  margin-left: 50px;
+  position: relative;
+  margin-bottom: 50em;
+
+
+}
+label, #title{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-style: italic;
+  font-size: 6rem;
+  padding: 1%;
+}
+#title, #ui-id-1{
+  font-family: 'Fredoka One', monospace;
+  color: white;
+  font-size: 3.25rem;
+  padding: .05rem;
+  text-align: center;
+  font-variant: all-small-caps;
+}
+ul, p{
+  font-size: 2rem;
+  text-align: center;
+  font-family: 'Fredoka One', monospace;
+  align-items: center;
+  align-content: space-around;
+  width: 100%;
+  font-kerning: none;
+
+}
+.ui-autocomplete-input{
+  text-align: center;
+
+}
+label{
+  margin-bottom: 5%;
+}
+input {
+  margin-top: 2em;
+  border: solid 20px rgb(188, 255, 185);
+  // border-right: 1px solid #353535;
+  // border-bottom: 1px solid #353535;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 0px;
+  border-radius: 30px; 
+  // background: blue;
+  background: linear-gradient(70deg, rgba(255,162,218,.7) 0%, rgba(135,92,255,.7) 50%, rgba(61,222,255,.7) 100%);
+  box-shadow:
+        inset 0 0 50px #fff,
+        inset 20px 0 80px #f0f,
+        inset -20px 0 80px #0ff,
+        inset 20px 0 300px #f0f,
+        inset -20px 0 300px #0ff,
+        0 0 50px #fff,
+        -10px 0 80px #f0f,
+        10px 0 80px #0ff;
+}
+
+li{
+  list-style: none;
+  font-size: 3rem;
+  padding:0;
+}
+
+.featuring{
+  align-content: center;
+  width: 100%;
+  font-kerning: none;
+  margin-bottom: 5em;
+
+}
