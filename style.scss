@@ -9,11 +9,12 @@
 body {
   background-color: black;
   background-image: url(https://images.pexels.com/photos/3709430/pexels-photo-3709430.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
-  height: 73em; 
+  min-height: 70em; 
   display: grid;
   grid-template: repeat(15, 1fr) / repeat(15, 1fr);
   overflow: visible;
-  margin-bottom: 10em;
+  padding-top: 5em;
+  margin-bottom: 5em;
   
 }
 
@@ -43,6 +44,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 20em;
+  max-width: fit-content;
 }
 
 .css {
@@ -55,7 +57,7 @@ body {
 
   @for $i from 0 to 10 {
     &:nth-child(#{$i + 1}) {
-      font-size: #{100 + $i * 10}px;
+      font-size: #{80 + $i * 10}px;
       animation-delay: #{$i * -0.3}s;
       opacity: #{0.1 + $i * 0.1};
       transform:
@@ -84,8 +86,8 @@ body {
 //   color: #fff;
 // }
 p{
-  margin-top: 2%;
-  margin-left: 2%;
+  // margin-top: 2%;
+  // margin-left: 2%;
   font-size: 2rem;
   color: rgb(255, 255, 255);
   text-align: center;
@@ -110,17 +112,18 @@ img{
 }
 .container{
   // margin: 00px;
-  padding-top: 10px;
+  padding-top: 0em;
   align-items: center;
   flex-direction: column;
   // margin: auto;
   z-index: 1000;
-  min-width: 100%;
+  width: 100%;
+  flex-direction: column;
   justify-content: center;
   display: flex;
-  margin-left: 50px;
   position: relative;
-  margin-bottom: 50em;
+  margin-top: 65em;
+  margin-bottom: 0em;
 
 
 }
@@ -133,10 +136,12 @@ label, #title{
 #title, #ui-id-1{
   font-family: 'Fredoka One', monospace;
   color: white;
-  font-size: 3.25rem;
-  padding: .05rem;
+  font-size: 3.3rem;
+  padding-bottom: 0.5rem;
   text-align: center;
   font-variant: all-small-caps;
+  vertical-align: middle;
+
 }
 ul, p{
   font-size: 2rem;
@@ -156,14 +161,12 @@ label{
   margin-bottom: 5%;
 }
 input {
-  margin-top: 2em;
+  width: 100%;
+  margin-top: .5em;
   border: solid 20px rgb(188, 255, 185);
-  // border-right: 1px solid #353535;
-  // border-bottom: 1px solid #353535;
   -webkit-border-radius: 5px;
   -moz-border-radius: 0px;
   border-radius: 30px; 
-  // background: blue;
   background: linear-gradient(70deg, rgba(255,162,218,.7) 0%, rgba(135,92,255,.7) 50%, rgba(61,222,255,.7) 100%);
   box-shadow:
         inset 0 0 50px #fff,
@@ -182,10 +185,37 @@ li{
   padding:0;
 }
 
+.random-quote{
+  align-content: center;
+  width: 100%;
+  font-kerning: none;
+  margin-bottom: 0em;
+
+}
+#flick-prompt{
+  margin-top: .5rem;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  font-kerning: none;
+  margin-bottom: 0em;
+  color: rgb(255, 98, 255);
+  font-family: 'Fredoka One', monospace;
+  text-align: center;
+
+}
+#movie-quote{
+  align-content: center;
+  width: 100%;
+  font-kerning: none;
+  margin-bottom: 0em;
+  color: aquamarine;
+}
+
 .featuring{
   align-content: center;
   width: 100%;
   font-kerning: none;
-  margin-bottom: 5em;
+  margin-bottom: 0em;
 
 }
