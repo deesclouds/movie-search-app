@@ -1,78 +1,425 @@
-body{
-    margin-left: 0%;
-    padding-top: 10%;
-    background-color: rgb(244, 216, 252);
-    background-image: url(./assets/pexels-philippe-donn-1257860.jpg);
-    background-size: 50%;
-    font-size: 62.5%;
-    text-align: center;
-    color: #fff;
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+*, *::before, *::after {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
-p{
-    margin-top: 2%;
-    margin-left: 2%;
-    font-size: 2rem;
-    color: #fff;
-    text-align: center;
-}
-img{
-    margin: 2%;
-    padding: 0;
-    max-width: 50%;
-    background-color: #fff;
-    top: calc(50% - 150px);
-    left: calc(50% - 150px);
-    box-shadow:
-          inset 0 0 50px #fff,
-          inset 20px 0 80px #f0f,
-          inset -20px 0 80px #0ff,
-          inset 20px 0 300px #f0f,
-          inset -20px 0 300px #0ff,
-          0 0 50px #fff,
-          -10px 0 80px #f0f,
-          10px 0 80px #0ff;
 
+body {
+  background-color: black;
+  background-image: url(https://images.pexels.com/photos/3709430/pexels-photo-3709430.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+  min-height: 70em;
+  display: grid;
+  grid-template: repeat(15, 1fr)/repeat(15, 1fr);
+  overflow: visible;
+  padding-top: 5em;
+  margin-bottom: 5em;
 }
-.container{
-    margin: auto;
-    padding: 0;
+
+.cell {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
 }
-label, #title{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-style: italic;
-    font-size: 5rem;
-    padding: 1%;
+
+.cell:nth-child(15n+1):hover ~ .content {
+  --positionX: 0;
 }
-#title, #ui-id-1{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(241, 239, 239);
-    font-size: 3rem;
-    padding: 1rem;
-    text-align: center;
+
+.cell:nth-child(n+1):nth-child(-n+15):hover ~ .content {
+  --positionY: 0;
 }
-ul, p{
-    font-size: 2rem;
+
+.cell:nth-child(15n+2):hover ~ .content {
+  --positionX: 1;
 }
-.ui-autocomplete-input{
-    text-align: center;
+
+.cell:nth-child(n+16):nth-child(-n+30):hover ~ .content {
+  --positionY: 1;
 }
-label{
-    margin-bottom: 5%;
+
+.cell:nth-child(15n+3):hover ~ .content {
+  --positionX: 2;
 }
+
+.cell:nth-child(n+31):nth-child(-n+45):hover ~ .content {
+  --positionY: 2;
+}
+
+.cell:nth-child(15n+4):hover ~ .content {
+  --positionX: 3;
+}
+
+.cell:nth-child(n+46):nth-child(-n+60):hover ~ .content {
+  --positionY: 3;
+}
+
+.cell:nth-child(15n+5):hover ~ .content {
+  --positionX: 4;
+}
+
+.cell:nth-child(n+61):nth-child(-n+75):hover ~ .content {
+  --positionY: 4;
+}
+
+.cell:nth-child(15n+6):hover ~ .content {
+  --positionX: 5;
+}
+
+.cell:nth-child(n+76):nth-child(-n+90):hover ~ .content {
+  --positionY: 5;
+}
+
+.cell:nth-child(15n+7):hover ~ .content {
+  --positionX: 6;
+}
+
+.cell:nth-child(n+91):nth-child(-n+105):hover ~ .content {
+  --positionY: 6;
+}
+
+.cell:nth-child(15n+8):hover ~ .content {
+  --positionX: 7;
+}
+
+.cell:nth-child(n+106):nth-child(-n+120):hover ~ .content {
+  --positionY: 7;
+}
+
+.cell:nth-child(15n+9):hover ~ .content {
+  --positionX: 8;
+}
+
+.cell:nth-child(n+121):nth-child(-n+135):hover ~ .content {
+  --positionY: 8;
+}
+
+.cell:nth-child(15n+10):hover ~ .content {
+  --positionX: 9;
+}
+
+.cell:nth-child(n+136):nth-child(-n+150):hover ~ .content {
+  --positionY: 9;
+}
+
+.cell:nth-child(15n+11):hover ~ .content {
+  --positionX: 10;
+}
+
+.cell:nth-child(n+151):nth-child(-n+165):hover ~ .content {
+  --positionY: 10;
+}
+
+.cell:nth-child(15n+12):hover ~ .content {
+  --positionX: 11;
+}
+
+.cell:nth-child(n+166):nth-child(-n+180):hover ~ .content {
+  --positionY: 11;
+}
+
+.cell:nth-child(15n+13):hover ~ .content {
+  --positionX: 12;
+}
+
+.cell:nth-child(n+181):nth-child(-n+195):hover ~ .content {
+  --positionY: 12;
+}
+
+.cell:nth-child(15n+14):hover ~ .content {
+  --positionX: 13;
+}
+
+.cell:nth-child(n+196):nth-child(-n+210):hover ~ .content {
+  --positionY: 13;
+}
+
+.cell:nth-child(15n+15):hover ~ .content {
+  --positionX: 14;
+}
+
+.cell:nth-child(n+211):nth-child(-n+225):hover ~ .content {
+  --positionY: 14;
+}
+
+.content {
+  --positionX: 7;
+  --positionY: 7;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20em;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+.css {
+  font-family: "Fredoka One", monospace;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-animation: color 3s infinite linear;
+          animation: color 3s infinite linear;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.6666666667);
+  transition: all 0.5s;
+}
+.css:nth-child(1) {
+  font-size: 80px;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  opacity: 0.1;
+  transform: translateX(calc(-50% - (var(--positionX) - 7) * 21px)) translateY(calc(-50% - (var(--positionY) - 7) * 21px)) rotateX(calc(0deg - (var(--positionY) - 7) * 5deg)) rotateY(calc((var(--positionX) - 7) * 5deg));
+}
+.css:nth-child(2) {
+  font-size: 90px;
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
+  opacity: 0.2;
+  transform: translateX(calc(-50% - (var(--positionX) - 7) * 18px)) translateY(calc(-50% - (var(--positionY) - 7) * 18px)) rotateX(calc(0deg - (var(--positionY) - 7) * 5deg)) rotateY(calc((var(--positionX) - 7) * 5deg));
+}
+.css:nth-child(3) {
+  font-size: 100px;
+  -webkit-animation-delay: -0.6s;
+          animation-delay: -0.6s;
+  opacity: 0.3;
+  transform: translateX(calc(-50% - (var(--positionX) - 7) * 15px)) translateY(calc(-50% - (var(--positionY) - 7) * 15px)) rotateX(calc(0deg - (var(--positionY) - 7) * 5deg)) rotateY(calc((var(--positionX) - 7) * 5deg));
+}
+.css:nth-child(4) {
+  font-size: 110px;
+  -webkit-animation-delay: -0.9s;
+          animation-delay: -0.9s;
+  opacity: 0.4;
+  transform: translateX(calc(-50% - (var(--positionX) - 7) * 12px)) translateY(calc(-50% - (var(--positionY) - 7) * 12px)) rotateX(calc(0deg - (var(--positionY) - 7) * 5deg)) rotateY(calc((var(--positionX) - 7) * 5deg));
+}
+.css:nth-child(5) {
+  font-size: 120px;
+  -webkit-animation-delay: -1.2s;
+          animation-delay: -1.2s;
+  opacity: 0.5;
+  transform: translateX(calc(-50% - (var(--positionX) - 7) * 9px)) translateY(calc(-50% - (var(--positionY) - 7) * 9px)) rotateX(calc(0deg - (var(--positionY) - 7) * 5deg)) rotateY(calc((var(--positionX) - 7) * 5deg));
+}
+.css:nth-child(6) {
+  font-size: 130px;
+  -webkit-animation-delay: -1.5s;
+          animation-delay: -1.5s;
+  opacity: 0.6;
+  transform: translateX(calc(-50% - (var(--positionX) - 7) * 6px)) translateY(calc(-50% - (var(--positionY) - 7) * 6px)) rotateX(calc(0deg - (var(--positionY) - 7) * 5deg)) rotateY(calc((var(--positionX) - 7) * 5deg));
+}
+.css:nth-child(7) {
+  font-size: 140px;
+  -webkit-animation-delay: -1.8s;
+          animation-delay: -1.8s;
+  opacity: 0.7;
+  transform: translateX(calc(-50% - (var(--positionX) - 7) * 3px)) translateY(calc(-50% - (var(--positionY) - 7) * 3px)) rotateX(calc(0deg - (var(--positionY) - 7) * 5deg)) rotateY(calc((var(--positionX) - 7) * 5deg));
+}
+.css:nth-child(8) {
+  font-size: 150px;
+  -webkit-animation-delay: -2.1s;
+          animation-delay: -2.1s;
+  opacity: 0.8;
+  transform: translateX(calc(-50% - (var(--positionX) - 7) * 0px)) translateY(calc(-50% - (var(--positionY) - 7) * 0px)) rotateX(calc(0deg - (var(--positionY) - 7) * 5deg)) rotateY(calc((var(--positionX) - 7) * 5deg));
+}
+.css:nth-child(9) {
+  font-size: 160px;
+  -webkit-animation-delay: -2.4s;
+          animation-delay: -2.4s;
+  opacity: 0.9;
+  transform: translateX(calc(-50% - (var(--positionX) - 7) * -3px)) translateY(calc(-50% - (var(--positionY) - 7) * -3px)) rotateX(calc(0deg - (var(--positionY) - 7) * 5deg)) rotateY(calc((var(--positionX) - 7) * 5deg));
+}
+.css:nth-child(10) {
+  font-size: 170px;
+  -webkit-animation-delay: -2.7s;
+          animation-delay: -2.7s;
+  opacity: 1;
+  transform: translateX(calc(-50% - (var(--positionX) - 7) * -6px)) translateY(calc(-50% - (var(--positionY) - 7) * -6px)) rotateX(calc(0deg - (var(--positionY) - 7) * 5deg)) rotateY(calc((var(--positionX) - 7) * 5deg));
+}
+@-webkit-keyframes color {
+  0% {
+    color: hsl(0deg, 75%, 75%);
+  }
+  10% {
+    color: hsl(36deg, 75%, 75%);
+  }
+  20% {
+    color: hsl(72deg, 75%, 75%);
+  }
+  30% {
+    color: hsl(108deg, 75%, 75%);
+  }
+  40% {
+    color: hsl(144deg, 75%, 75%);
+  }
+  50% {
+    color: hsl(180deg, 75%, 75%);
+  }
+  60% {
+    color: hsl(216deg, 75%, 75%);
+  }
+  70% {
+    color: hsl(252deg, 75%, 75%);
+  }
+  80% {
+    color: hsl(288deg, 75%, 75%);
+  }
+  90% {
+    color: hsl(324deg, 75%, 75%);
+  }
+  100% {
+    color: hsl(0deg, 75%, 75%);
+  }
+}
+@keyframes color {
+  0% {
+    color: hsl(0deg, 75%, 75%);
+  }
+  10% {
+    color: hsl(36deg, 75%, 75%);
+  }
+  20% {
+    color: hsl(72deg, 75%, 75%);
+  }
+  30% {
+    color: hsl(108deg, 75%, 75%);
+  }
+  40% {
+    color: hsl(144deg, 75%, 75%);
+  }
+  50% {
+    color: hsl(180deg, 75%, 75%);
+  }
+  60% {
+    color: hsl(216deg, 75%, 75%);
+  }
+  70% {
+    color: hsl(252deg, 75%, 75%);
+  }
+  80% {
+    color: hsl(288deg, 75%, 75%);
+  }
+  90% {
+    color: hsl(324deg, 75%, 75%);
+  }
+  100% {
+    color: hsl(0deg, 75%, 75%);
+  }
+}
+
+p {
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+img {
+  margin: 2%;
+  padding: 0;
+  max-width: 50%;
+  background-color: #fff;
+  top: calc(50% - 150px);
+  left: calc(50% - 150px);
+  box-shadow: inset 0 0 50px #fff, inset 20px 0 80px #f0f, inset -20px 0 80px #0ff, inset 20px 0 300px #f0f, inset -20px 0 300px #0ff, 0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff;
+}
+
+.container {
+  padding-top: 0em;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1000;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  position: relative;
+  margin-top: 65em;
+  margin-bottom: 0em;
+}
+
+label, #title {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-style: italic;
+  font-size: 6rem;
+  padding: 1%;
+}
+
+#title, #ui-id-1 {
+  font-family: "Fredoka One", monospace;
+  color: white;
+  font-size: 3.3rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  font-variant: all-small-caps;
+  vertical-align: middle;
+}
+
+ul, p {
+  font-size: 2rem;
+  text-align: center;
+  font-family: "Fredoka One", monospace;
+  align-items: center;
+  align-content: space-around;
+  width: 100%;
+  font-kerning: none;
+}
+
+.ui-autocomplete-input {
+  text-align: center;
+}
+
+label {
+  margin-bottom: 5%;
+}
+
 input {
-    margin-top: 4rem;
-    width: 45%;
-    border: solid 2px #000;
-    border-right: 1px solid #353535;
-    border-bottom: 1px solid #353535;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px; 
+  width: 100%;
+  margin-top: 0.5em;
+  border: solid 20px rgb(188, 255, 185);
+  border-radius: 30px;
+  background: linear-gradient(70deg, rgba(255, 162, 218, 0.7) 0%, rgba(135, 92, 255, 0.7) 50%, rgba(61, 222, 255, 0.7) 100%);
+  box-shadow: inset 0 0 50px #fff, inset 20px 0 80px #f0f, inset -20px 0 80px #0ff, inset 20px 0 300px #f0f, inset -20px 0 300px #0ff, 0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff;
 }
 
-li{
-    list-style: none;
-    font-size: 3rem;
-    padding:0;
+li {
+  list-style: none;
+  font-size: 3rem;
+  padding: 0;
 }
 
+.random-quote {
+  align-content: center;
+  width: 100%;
+  font-kerning: none;
+  margin-bottom: 0em;
+}
+
+#flick-prompt {
+  margin-top: 0.5rem;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  font-kerning: none;
+  margin-bottom: 0em;
+  color: rgb(255, 98, 255);
+  font-family: "Fredoka One", monospace;
+  text-align: center;
+}
+
+#movie-quote {
+  align-content: center;
+  width: 100%;
+  font-kerning: none;
+  margin-bottom: 0em;
+  color: aquamarine;
+}
+
+.featuring {
+  align-content: center;
+  width: 100%;
+  font-kerning: none;
+  margin-bottom: 0em;
+}/*# sourceMappingURL=style.css.map */
