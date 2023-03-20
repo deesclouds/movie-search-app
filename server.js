@@ -21,10 +21,17 @@ MongoClient.connect(dbConnectionStr)
 
 app.use(express.urlencoded({extended : true}))   
 app.use(express.json())
+app.use(express.static('public'))
 app.use(cors())
+
+// sends the index.html file as a response when GET request is made to the root path. 
+app.get('/', (req, res)=> {
+    res.sendFile(__dirname + 'public/index.html');
+})
 
 app.get("/search", async (request, response) => {
     try {
+        // console.log('Received search query: ${request.query.query}')
         let result = await collection.aggregate([
             {
                 "$search" : {
